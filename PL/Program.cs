@@ -11,36 +11,62 @@ namespace PL
 		static void Main(string[] args)
 		{
 			
-		    int edad=0;
-			string cad;
-			
-			Console.WriteLine("Numero de Personas");
-		    edad = int.Parse(Console.ReadLine());
-				
-			Console.WriteLine("Ingrese las Edades:");
-	
+			bool salir = false;
 
-			int[] ed = new int[edad + 1];
-
-
-			for (int i=1; i<=edad; i++)
-			
+			while (!salir)
 			{
-				cad = Console.ReadLine();	
-				ed[i] = int.Parse(cad);
 
-				if (ed[i] >= 18 )
-					{
-						Console.WriteLine("MAYOR DE EDAD");
-					}
-					else
-					{
-						Console.WriteLine("NO ES MAYOR DE EDAD");
-					}
-                    
-			Console.ReadLine();	
+				try
+				{
 
+					Console.WriteLine("1. Edades");
+					Console.WriteLine("2. Update");
+					Console.WriteLine("3. Delete");
+					Console.WriteLine("4. GetAll");
+					Console.WriteLine("5. GetById");
+					Console.WriteLine("6. SALIR");
+					Console.WriteLine("SELECCIONA UNA OPCION");
+					int opcion = Convert.ToInt32(Console.ReadLine());
+
+					switch (opcion)
+					{
+						case 1:
+							Ejercicios.Ejer.Edad();
+							break;
+
+						//case 2:
+						//	PL.Producto.UpdateEF();
+						//	break;
+
+						//case 3:
+						//	PL.Producto.DeleteEF();
+						//	break;
+
+						//case 4:
+						//	PL.Producto.GetAllEF();
+						//	break;
+
+						//case 5:
+						//    PL.Producto.GetByIdEF();
+						//    break;  
+
+						case 6:
+							Console.WriteLine("SELECCIONASTE SALIR");
+							salir = true;
+							break;
+						default:
+							Console.WriteLine("ELIGE UNA OPCION");
+							break;
+					}
+
+				}
+				catch (FormatException e)
+				{
+					Console.WriteLine(e.Message);
+				}
 			}
+
+			Console.ReadLine();
 
 		}
 	}
