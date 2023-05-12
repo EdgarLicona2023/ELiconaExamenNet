@@ -22,7 +22,7 @@ namespace PL
 					Console.WriteLine("1. Edades");
 					Console.WriteLine("2. Factorial");
 					Console.WriteLine("3. Palabra Mas Larga");
-					//Console.WriteLine("4. GetAll");
+					Console.WriteLine("4. Sopa de Letras");
 					//Console.WriteLine("5. GetById");
 					Console.WriteLine("6. SALIR\n");
 					//Console.WriteLine("SELECCIONA UNA OPCION");
@@ -42,9 +42,9 @@ namespace PL
 							Ejercicios.Ejer.PalabraMasLarga();
 							break;
 
-						//case 4:
-						//	Ejercicios.Ejer.GetAllEF();
-						//	break;
+						case 4:
+							Ejercicios.Ejer.SopaDeLetras();
+							break;
 
 						//case 5:
 						//  Ejercicios.Ejer.GetByIdEF();

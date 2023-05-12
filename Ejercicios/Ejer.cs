@@ -72,10 +72,16 @@ namespace Ejercicios
 
 		public static void PalabraMasLarga()
 		{
-			string textoLargo = "Despues de bañar a mi perro este se revuelca en la tierra";
+			string textoLargo;
+
+			Console.WriteLine("INGRESE LA PALABRA:");
+			textoLargo = Console.ReadLine();
+
+			//string textoLargo = "Despues de bañar a mi perro este se revuelca en la tierra";
+			
 			string palabraMasLarga = "";
 			string[] palabras = textoLargo.Split(' ');
-			Console.WriteLine("Palabra: " + "Despues de bañar a mi perro este se revuelca en la tierra");
+			//Console.WriteLine("Palabra: " + "Despues de bañar a mi perro este se revuelca en la tierra");
 
 			foreach(var palabra in palabras)
 			{
@@ -86,8 +92,22 @@ namespace Ejercicios
 					
 			}
 
-			Console.WriteLine("La palabra mas larga de la oracios es: " + palabraMasLarga);	
+			Console.WriteLine("La Palabra mas Larga de la Oracion es: " + palabraMasLarga);	
 			Console.ReadLine();
+		}
+
+		public static void SopaDeLetras()
+		{
+			//string palabra = "CASA";
+			//Console.WriteLine("Palabra: " + "CASA");
+			string palabra;
+
+			Console.WriteLine("INGRESE LA PALABRA:");
+			palabra = Console.ReadLine();
+
+			palabra = string.Concat(palabra.OrderBy(ch => ch));
+
+			Console.WriteLine("Palabra Ordenada: " + palabra);
 		}
 
 	}
