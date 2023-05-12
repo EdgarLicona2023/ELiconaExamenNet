@@ -20,10 +20,10 @@ namespace PL
 				{
 					Console.WriteLine("SELECCIONA UNA OPCION\n");
 					Console.WriteLine("1. Edades");
-					Console.WriteLine("2. Factorial");
-					Console.WriteLine("3. Palabra Mas Larga");
-					Console.WriteLine("4. Sopa de Letras");
-					//Console.WriteLine("5. GetById");
+					Console.WriteLine("2. Empleado");
+					Console.WriteLine("3. Factorial");
+					Console.WriteLine("4. Palabra Mas Larga");
+					Console.WriteLine("5. Sopa de Letras");
 					Console.WriteLine("6. SALIR\n");
 					//Console.WriteLine("SELECCIONA UNA OPCION");
 					int opcion = Convert.ToInt32(Console.ReadLine());
@@ -35,20 +35,20 @@ namespace PL
 							break;
 
 						case 2:
-							Ejercicios.Ejer.Factorial();
+							Ejercicios.Ejer.Empleado();
 							break;
 
 						case 3:
-							Ejercicios.Ejer.PalabraMasLarga();
+							Ejercicios.Ejer.Factorial();
 							break;
 
 						case 4:
-							Ejercicios.Ejer.SopaDeLetras();
+							Ejercicios.Ejer.PalabraMasLarga();
 							break;
 
-						//case 5:
-						//  Ejercicios.Ejer.GetByIdEF();
-						//  break;  
+						case 5:
+							Ejercicios.Ejer.SopaDeLetras();
+							break;
 
 						case 6:
 							Console.WriteLine("SELECCIONASTE SALIR");

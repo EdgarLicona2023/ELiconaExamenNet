@@ -13,7 +13,7 @@ namespace Ejercicios
 		public static void Edad()
         {
 			int edad, mayor, menor, suma=0,SUMA=0;
-			string cad;
+			string leer;
 
 			Console.WriteLine("Numero de Personas");
 			edad = int.Parse(Console.ReadLine());
@@ -27,8 +27,8 @@ namespace Ejercicios
 			for (int i = 1; i <= edad; i++)
 
 			{
-				cad = Console.ReadLine();
-				ed[i] = int.Parse(cad);
+				leer = Console.ReadLine();
+				ed[i] = int.Parse(leer);
 
 				if (ed[i] >= 18)
 				{
@@ -61,7 +61,9 @@ namespace Ejercicios
 
 			Console.WriteLine("Introduce El Numero");
 			int num = Convert.ToInt32(Console.ReadLine());
+
 			int factorial = 1;
+
 			for (int i = 1; i <= num; i++)
 			{
 				factorial = factorial * i;
@@ -72,16 +74,16 @@ namespace Ejercicios
 
 		public static void PalabraMasLarga()
 		{
-			string textoLargo;
+			string txLargo;
 
 			Console.WriteLine("INGRESE LA PALABRA:");
-			textoLargo = Console.ReadLine();
+			txLargo = Console.ReadLine();
 
-			//string textoLargo = "Despues de bañar a mi perro este se revuelca en la tierra";
 			
 			string palabraMasLarga = "";
-			string[] palabras = textoLargo.Split(' ');
-			//Console.WriteLine("Palabra: " + "Despues de bañar a mi perro este se revuelca en la tierra");
+
+			string[] palabras = txLargo.Split(' ');
+			
 
 			foreach(var palabra in palabras)
 			{
@@ -98,8 +100,7 @@ namespace Ejercicios
 
 		public static void SopaDeLetras()
 		{
-			//string palabra = "CASA";
-			//Console.WriteLine("Palabra: " + "CASA");
+			
 			string palabra;
 
 			Console.WriteLine("INGRESE LA PALABRA:");
@@ -108,6 +109,47 @@ namespace Ejercicios
 			palabra = string.Concat(palabra.OrderBy(ch => ch));
 
 			Console.WriteLine("Palabra Ordenada: " + palabra);
+		}
+
+		public static void Empleado()
+		{
+			
+			string nombre;
+			string apellido;
+			double diasTrabajados;
+			double pagoPorDia;
+
+	
+			Console.WriteLine("Salario\n");
+			Console.WriteLine("Nombre Empleado: ");
+			nombre = Console.ReadLine();
+			
+			Console.WriteLine("Apellido Empleado:");
+			apellido = Console.ReadLine();
+
+			Console.WriteLine("Dias Trabajados:");
+			diasTrabajados = double.Parse(Console.ReadLine());
+
+			
+			Console.WriteLine("Pago Por Dia:");
+			pagoPorDia = double.Parse(Console.ReadLine());
+
+			// Realizar cálculos
+			double calculaSueldo = diasTrabajados * pagoPorDia;
+			
+			// Restamos al salario bruto
+			double sueldoNeto = calculaSueldo;
+		
+			
+			// Imprimir los valores
+		
+			Console.WriteLine("Nombre Empleado: " + nombre);
+			Console.WriteLine("Apelldio Empleado: " + apellido);
+			//Console.WriteLine("Dias Trabajados: " + diasTrabajados);
+			//Console.WriteLine("Sueldo Diario: " + pagoPorDia);
+			Console.WriteLine("Sueldo: " + sueldoNeto);
+			
+		
 		}
 
 	}
