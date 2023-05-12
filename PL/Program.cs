@@ -18,14 +18,14 @@ namespace PL
 
 				try
 				{
-
+					Console.WriteLine("SELECCIONA UNA OPCION\n");
 					Console.WriteLine("1. Edades");
-					Console.WriteLine("2. Update");
-					Console.WriteLine("3. Delete");
-					Console.WriteLine("4. GetAll");
-					Console.WriteLine("5. GetById");
-					Console.WriteLine("6. SALIR");
-					Console.WriteLine("SELECCIONA UNA OPCION");
+					Console.WriteLine("2. Factorial");
+					Console.WriteLine("3. Palabra Mas Larga");
+					//Console.WriteLine("4. GetAll");
+					//Console.WriteLine("5. GetById");
+					Console.WriteLine("6. SALIR\n");
+					//Console.WriteLine("SELECCIONA UNA OPCION");
 					int opcion = Convert.ToInt32(Console.ReadLine());
 
 					switch (opcion)
@@ -34,21 +34,21 @@ namespace PL
 							Ejercicios.Ejer.Edad();
 							break;
 
-						//case 2:
-						//	PL.Producto.UpdateEF();
-						//	break;
+						case 2:
+							Ejercicios.Ejer.Factorial();
+							break;
 
-						//case 3:
-						//	PL.Producto.DeleteEF();
-						//	break;
+						case 3:
+							Ejercicios.Ejer.PalabraMasLarga();
+							break;
 
 						//case 4:
-						//	PL.Producto.GetAllEF();
+						//	Ejercicios.Ejer.GetAllEF();
 						//	break;
 
 						//case 5:
-						//    PL.Producto.GetByIdEF();
-						//    break;  
+						//  Ejercicios.Ejer.GetByIdEF();
+						//  break;  
 
 						case 6:
 							Console.WriteLine("SELECCIONASTE SALIR");
