@@ -12,7 +12,7 @@ namespace Ejercicios
 
 		public static void Edad()
         {
-			int edad = 0;
+			int edad, mayor, menor, suma=0,SUMA=0;
 			string cad;
 
 			Console.WriteLine("Numero de Personas");
@@ -32,16 +32,24 @@ namespace Ejercicios
 
 				if (ed[i] >= 18)
 				{
+					mayor = 1;
+					suma += mayor;
 					Console.WriteLine("MAYOR DE EDAD");
 				}
 				else
 				{
+					menor = 1;
+					SUMA += menor;
 					Console.WriteLine("NO ES MAYOR DE EDAD");
 				}
 
-				Console.ReadLine();
+			
 
 			}
+			Console.WriteLine("Cantidad de Personas Mayores: " + suma);
+			Console.WriteLine("Cantidad de Personas Menores: " + SUMA);
+
+			Console.ReadLine();
 
 
 		}
